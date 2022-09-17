@@ -1,4 +1,1 @@
-# InventoryManagement
-Using Java Springboot
-
--- On Branch master
+#On branch Development
