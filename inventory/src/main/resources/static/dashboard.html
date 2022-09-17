@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
 
 <style>
@@ -115,25 +116,7 @@
                 
                     <!-- TABLE: LATEST ORDERS -->
                
-                      <table class="table table-bordered mt-5">
-
-                        <thead class="thead-light">
-                          <tr>
-                            <th scope="col">Employee Code</th>
-                            <th scope="col">Employee Name</th>
-                            <th scope="col">System Details</th>
-                            <th scope="col">Headphone</th>
-                            <th scope="col">Keyboard</th>
-                            <th scope="col">Mouse</th>
-                            <th scope="col">Laptop Stand</th>                            
-                          </tr>
-                        </thead>
-
-                        <tbody id="table-body">
-
-                        </tbody>
-
-                      </table>
+                      
                         
                     <!-- /.card -->
                 </div>
@@ -145,10 +128,68 @@
 
     </section>
 
+    <section class="content">
+
+        <div class="container">
+
+            <div class="row mt-3">
+
+                <div class="col-md-12">
+
+                  <table class="table table-bordered mt-5" id="table-id">
+
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col">Employee Code</th>
+                        <th scope="col">Employee Name</th>
+                        <th scope="col">System Details</th>
+                        <th scope="col">Headphone</th>
+                        <th scope="col">Keyboard</th>
+                        <th scope="col">Mouse</th>
+                        <th scope="col">Laptop Stand</th>                            
+                      </tr>
+                    </thead>
+
+                    <tbody id="table-body">
+
+                        <tr>
+                          <td>go</td>
+                          <td>go</td>
+                          <td>go</td>
+                          <td>go</td>
+                          <td>go</td>
+                          <td>go</td>
+                          <td>go</td>
+                        </tr>
+
+                        <tr>
+                          <td>hi</td>
+                          <td>hi</td>
+                          <td>hi</td>
+                          <td>hi</td>
+                          <td>hi</td>
+                          <td>hi</td>
+                          <td>hi</td>
+                        </tr>
+
+                    </tbody>
+
+                  </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 
 <script src="dist/js/adminlte.js"></script>
 
@@ -156,6 +197,23 @@
 
 <script src="dist/js/index.js"></script>
 
+<script>
+    $(function () {
+    $("#table-id").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searcgong": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
 
 </body>
 </html>

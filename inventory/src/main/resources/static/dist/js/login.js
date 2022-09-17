@@ -10,8 +10,20 @@ const checkLogin = () => {
         url: http+"/login?username="+username+"&password="+password,
         contentType: "application/json",
 
-        success: function () {
-            window.location.href = 'dashboard';
+        success: function (data) {
+
+           if(data) {
+            toastr.success('Login Successful.', 'Done!', {timeOut: 3000});
+            setTimeout(function() {
+                window.location.href = 'dashboard';
+            },1000);
+           }
+           else{
+            toastr.error('Please check your credentials.', 'Login failed!', {timeOut: 5000});
+           }
+            
+
+            // 
         } ,
         error: function (errorData) {
             alert("ERROR",errorData);

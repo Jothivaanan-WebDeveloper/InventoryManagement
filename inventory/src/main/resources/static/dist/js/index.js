@@ -1,10 +1,14 @@
+$(document).ready (function () {
+    inventoryList();
+});
+
 
 const inventoryList = () => {
-    alert("INSIDE INV")
+    alert("INSIDE DATA")
 
     $.ajax({
-        type: "get",
-        url: "http://localhost8080/data",  
+        type: "GET",
+        url: http+"/data",  
         contentType: "application/json; charset=utf-8",
         
         success: function(successData) {
@@ -17,7 +21,5 @@ const inventoryList = () => {
     })
 }
 
-$(document).ready (function () {
-    inventoryList();
-});
+
 
