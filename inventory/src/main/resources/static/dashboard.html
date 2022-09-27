@@ -4,7 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Inventory Management</title>
+<<<<<<< HEAD
 
+=======
+    <!-- title icon -->
+    <link rel="icon" href="https://spng.pinpng.com/pngs/s/244-2447708_alia-instruments-b-blue-inventory-icon-png-transparent.png" 
+        type="image/gif"> 
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
@@ -12,22 +18,32 @@
         type="image/gif"> 
   <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+  <!-- Datatable -->
   <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+   
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
 
 <style>
     @media only screen and (max-width: 1200px) {
   .form-card {
-    width: auto !important;
-    
+    width: auto !important;   
   }
 }
+<<<<<<< HEAD
 html{
   scroll-behavior: smooth;
 }
 
+=======
+
+#btn-add{
+  margin-right: .5rem;
+}
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
 </style>
 
 <body class="hold-transition dark-mode">
@@ -59,10 +75,14 @@ html{
            
                 <div class="col-md-12">
                     <!-- MAP & BOX PANE -->
+<<<<<<< HEAD
                     <div class="card card-outline card-light mx-auto form-card collapsed-card" style="width: 70rem;" id="my-card">
+=======
+                    <div class="card card-outline card-light mx-auto collapsed-card" id="form-card" style="width: 70rem;" >
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
 
                     <div class="card-header">
-                        <h3 class="card-title" id="card-heading">Add Details</h3>
+                        <h3 class="card-title" id="card-heading">Inventory Details</h3>
 
                         <div class="card-tools">
 
@@ -76,6 +96,7 @@ html{
                     <div class="card-body p-2">
 
                         <form id="form-id">
+<<<<<<< HEAD
                           <input type="hidden" id="update-id">
                             <div class="form-row">
                               <div class="form-group col-md-6">
@@ -85,23 +106,43 @@ html{
                               <div class="form-group col-md-6">
                                 <label for="text-employeeName">Employee Name</label>
                                 <input type="text" class="form-control" id="text-employeeName" name="employeeName">
+=======
+
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="text-employeeCode">Employee Code</label>
+                                <input type="text" class="form-control" id="employeeCode" name="employeeCode" value="EMP-">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="text-employeeName">Employee Name</label>
+                                <input type="text" class="form-control" id="employeeName" name="employeeName">
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
                               </div>
                             </div>
 
                             <div class="form-row">
                               <div class="form-group col-md-6">
                                 <label for="text-systemInfo">System Information</label>
+<<<<<<< HEAD
                                 <input type="text" class="form-control" id="text-systemInfo" name="systemInfo">
                               </div>
                               <div class="form-group col-md-6">
                                 <label for="text-headphone">Headphone</label>
                                 <input type="text" class="form-control" id="text-headphone" name="headphone">
+=======
+                                <input type="text" class="form-control" id="systemInfo" name="systemInfo">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="text-headphone">Headphone</label>
+                                <input type="text" class="form-control" id="headphoneInfo" name="headphone">
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
                               </div>
                             </div>
 
                             <div class="form-row">
                               <div class="form-group col-md-4">
                                 <label for="text-keyboard">Keyboard</label>
+<<<<<<< HEAD
                                 <input type="text" class="form-control" id="text-keyboard" name="keyboard">
                               </div>
                               <div class="form-group col-md-4">
@@ -118,6 +159,24 @@ html{
                               <button type="reset" class="btn btn-info mt-3 btn-sm" id="btn-cancel" onclick="resetForm()">Cancel</button>
                             </div>
                             
+=======
+                                <input type="text" class="form-control" id="keyboardInfo" name="keyboard">
+                              </div>
+                              <div class="form-group col-md-4">
+                                <label for="text-mouse">Mouse</label>
+                                <input type="text" class="form-control" id="mouseInfo" name="mouse">
+                              </div>
+                              <div class="form-group col-md-4">
+                                <label for="text-stand">Laptop Stand</label>
+                                <input type="text" class="form-control" id="laptopStand" name="stand">
+                              </div>
+                            </div>                            
+                            <div class="mt-3 d-flex justify-content-end">
+                              <button type="submit" class="btn btn-light" id="btn-add">Add</button>
+                              <button type="reset" class="btn btn-secondary" id="btn-cancel" onclick="resetForm()">Cancel</button>
+                            </div>
+
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
 
                           </form>
 
@@ -126,22 +185,25 @@ html{
                     </div>
                 
                     <!-- TABLE: LATEST ORDERS -->
-               
-                      
-                        
+                 
                     <!-- /.card -->
                 </div>
-           
-
+        
             </div>
         <!-- /.row -->
         </div><!--/. container-fluid -->
 
     </section>
 
+<<<<<<< HEAD
     <div class="modal fade" id="modal-default">
       <div class="modal-dialog">
         <div class="modal-content">
+=======
+    <div class="modal fade" id="delete-model">
+      <div class="modal-dialog">
+        <div class="modal-content bg-secondary">
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
           <div class="modal-header">
             <h4 class="modal-title">Delete Confirmation</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -149,17 +211,29 @@ html{
             </button>
           </div>
           <div class="modal-body">
+<<<<<<< HEAD
             <p>Are you sure you can Delete this Data?</p>
           </div>
           <div class="modal-footer justify-content-between">
             <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
             <button type="button" class="btn btn-primary" id="save-btn" onclick="onDelete()">Yes</button>
+=======
+            <p>Are you sure want to delete this record?</p>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-outline-light" data-dismiss="modal">No</button>
+            <button type="button" class="btn btn-outline-light" onclick="deleteDetails()">Yes</button>
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
           </div>
         </div>
         <!-- /.modal-content -->
       </div>
       <!-- /.modal-dialog -->
     </div>
+<<<<<<< HEAD
+=======
+    <!-- /.modal -->
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
 
     <section class="content">
 
@@ -169,7 +243,7 @@ html{
 
                 <div class="col-md-12">
 
-                  <table class="table table-bordered mt-5" id="table-id">
+                  <table class="table table-bordered mt-5" id="example1">
 
                     <thead class="thead-light">
                       <tr>
@@ -179,12 +253,21 @@ html{
                         <th scope="col">Headphone</th>
                         <th scope="col">Keyboard</th>
                         <th scope="col">Mouse</th>
+<<<<<<< HEAD
                         <th scope="col">Laptop Stand</th>                            
                         <th scope="col">Action</th>                            
                       </tr>
                     </thead>
 
                     <tbody id="table-body">
+=======
+                        <th scope="col">Laptop Stand</th>      
+                        <th scope="col">Action</th>                      
+                      </tr>
+                    </thead>
+
+                    <tbody id="table-body">                        
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
 
                     </tbody>
 
@@ -194,25 +277,37 @@ html{
         </div>
     </section>
 
+<<<<<<< HEAD
 
     
+=======
+ 
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+<!-- Jquery Datatable -->
 <script src="plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-
+<!-- Bootstrap Datatable -->
 <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <!-- Datatable Buttons -->
+<<<<<<< HEAD
 <!-- <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
 <script src="plugins/jszip/jszip.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script> -->
+=======
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
 <!-- jquery-validation -->
 <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="plugins/jquery-validation/additional-methods.min.js"></script>
@@ -220,9 +315,7 @@ html{
 <script src="plugins/toastr/toastr.min.js"></script>
 <!-- Static Js -->
 <script src="dist/js/adminlte.js"></script>
-
 <script src="dist/js/main.js"></script>
-
 <script src="dist/js/index.js"></script>
 
 <script>
@@ -230,6 +323,7 @@ html{
    
     $.validator.setDefaults({
       submitHandler: function () {
+<<<<<<< HEAD
         if($("#update-id").val()=="")
     {
        
@@ -244,6 +338,9 @@ html{
         updateEmployee($("#update-id").val());
     }
         
+=======
+        addDetails();
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
         // alert( "Form successful submitted!" );
       }
     });
@@ -324,7 +421,10 @@ html{
     });
   });
   </script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
 
 </body>
 </html>
