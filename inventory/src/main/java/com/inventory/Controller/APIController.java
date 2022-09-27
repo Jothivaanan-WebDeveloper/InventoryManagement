@@ -37,10 +37,6 @@ public class APIController {
         return repository.findAll();
     }
 
-<<<<<<< HEAD
-   
-=======
->>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
     @GetMapping("id")
     private Optional<InventoryDetails> getById (@RequestParam ("id") int id) {
         return repository.findById(id);
