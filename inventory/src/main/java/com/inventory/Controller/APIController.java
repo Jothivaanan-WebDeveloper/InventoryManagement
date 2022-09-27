@@ -42,21 +42,6 @@ public class APIController {
         return repository.findById(id);
     }
  
-<<<<<<< HEAD
-   
-    @PostMapping("data")
-    private InventoryDetails saveById (@RequestBody InventoryDetails details) {
-        return repository.save(details);
-    }
-
-  
-    @PutMapping("data")
-    private InventoryDetails updateById (@RequestBody InventoryDetails details) {
-        return repository.save(details);
-    }
-
-  
-=======
 
     @PostMapping("data")
     private InventoryDetails saveById (@RequestBody InventoryDetails details) {
@@ -69,7 +54,6 @@ public class APIController {
     }
 
    
->>>>>>> 7865120a530ac46c9d574c33c65ee8f799558f31
     @DeleteMapping("data")
     private void removeById (@RequestParam ("id") int id) {
          repository.deleteById(id);
