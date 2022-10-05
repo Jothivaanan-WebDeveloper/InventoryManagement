@@ -36,7 +36,7 @@ const generate_table = (data) => {
         "autoWidth": false,
 
         //  "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        
+               
             data :data,
             
             columns : [
@@ -51,7 +51,7 @@ const generate_table = (data) => {
                 {data: null,
                 // "bSortable": false,  
                     "mRender": function (i) {
-                        return '<button class="btn btn-secondary btn-sm" id="btn-edit" onclick="onEdit('+ i.id +')">' + 'Edit' + '</button> <button class="btn btn-primary btn-sm" id="btn-delete" data-toggle="modal" data-target="#modal-default"  onclick="deleteConfirmation('+ i.id +')">' + 'Delete' + '</button>';    
+                        return '<div class="d-flex"><button class="btn btn-secondary btn-xs" id="btn-edit" onclick="onEdit('+ i.id +')"><i class="fa fa-edit d-inline p-1"></i>' + 'Edit' + '</button> <button class="btn btn-primary btn-xs" id="btn-delete" data-toggle="modal" data-target="#modal-default"  onclick="deleteConfirmation('+ i.id +')"><i class="fa fa-trash d-inline p-1"></i>' + 'Delete' + '</button></div>';    
                     }}
             ]
 
@@ -75,11 +75,8 @@ const addDetails = () => {
         mouseInfo : $("#text-mouseInfo").val(),
         laptopStand : $("#text-laptopStand").val()
     };
-
-    alert(inventoryDetails);
     // let inventoryDetails = Array.from(document.querySelectorAll('#form-id input')).reduce((acc, input) => ({...acc,[input.id]:input.value}),{});
-    alert(JSON.stringify(inventoryDetails));
-
+    
     $.ajax({
         type: "POST",
         url: http+"/data",  
@@ -92,7 +89,7 @@ const addDetails = () => {
         success: function(successData) {
             resetForm();
             console.log("LIST",successData);
-            toastr.success("User Added Succesfully", "Done!", { timeOut: 4000 });
+            toastr.success("Details Added Succesfully...", "Done!", { timeOut: 4000 });
             inventoryList();
         },
 
@@ -138,9 +135,6 @@ const onEdit = (id)=> {
 }
 
 const updateEmployee = (updateId) =>{
-    // alert("update function");
-    // alert(updateId);
-
     const emp = {
         id:updateId,
         employeeCode : $("#text-employeeCode").val(),
@@ -161,9 +155,10 @@ const updateEmployee = (updateId) =>{
         data: JSON.stringify(emp),
 
         success: function() {
+            $("#update-id").val("");
             resetForm();
             inventoryList();
-            toastr.success("User Added Succesfully", "Done!", { timeOut: 4000 });
+            toastr.info("Details Updated Succesfully...", "Done!", { timeOut: 4000 });
             
         },
         error: function(request, message, error) {
@@ -192,7 +187,7 @@ const onDelete =() => {
     
         success: function(successData) {
             console.log(successData);
-            toastr.success("Deleted Succesfully", "Done!", { timeOut: 4000 });
+            toastr.success("Deleted Succesfully...", "Done!", { timeOut: 4000 });
             inventoryList();
         },
         error: function(error) {

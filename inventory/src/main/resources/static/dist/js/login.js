@@ -6,16 +6,23 @@ const checkLogin = () => {
     
 
     $.ajax ({
+        
         type:"GET",
         url: http+"/login?username="+username+"&password="+password,
         contentType: "application/json",
 
         success: function (data) {
 
-           if(data) {
+           if(data == '1') {
             toastr.success('Login Successful.', 'Done!', {timeOut: 3000});
             setTimeout(function() {
-                window.location.href = 'dashboard';
+                window.location.href = 'AdminDashboard';
+            },1000);
+           }
+           else if(data == '2') {
+            toastr.info('Login Successful.', 'Done!', {timeOut: 3000});
+            setTimeout(function() {
+                window.location.href = 'EmployeeDashboard';
             },1000);
            }
            else{

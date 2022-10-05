@@ -8,12 +8,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PageController {
     
     @GetMapping("/") 
-    public String showIndex() {
-        return "login.html";
+    public String showLogin() {
+        return "Login.html";
     }
 
-    @GetMapping("/dashboard")
-    public String showDashboard() {
-        return "dashboard.html";
+    @GetMapping("/AdminDashboard")
+    public String showAdminDashboard() {
+        return "AdminDashboard.html";
+    }
+
+    @GetMapping("/EmployeeDashboard")
+    public String showEmployeeDashboard() {
+        return "EmployeeDashboard.html";
     }
 }

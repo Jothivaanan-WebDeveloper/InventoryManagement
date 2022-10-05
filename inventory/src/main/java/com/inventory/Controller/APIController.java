@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.inventory.Entity.InventoryDetails;
+import com.inventory.Entity.UserDetails;
 import com.inventory.Repository.InventoryRepository;
-import com.inventory.Repository.LoginUserRepository;
+import com.inventory.Repository.UserDetailsRepository;
 
 
 @RestController
@@ -24,11 +25,16 @@ public class APIController {
     private InventoryRepository repository;
 
     @Autowired
-    private LoginUserRepository loginRepository;
+    private UserDetailsRepository userDetailsRepository;
 
     @GetMapping("login")
     private int LoginUser (@RequestParam ("username") String loginUsername, @RequestParam ("password") String loginPassword) {
-        return loginRepository.checkUser(loginUsername, loginPassword);
+        return userDetailsRepository.checkUser(loginUsername, loginPassword);
+    }
+
+    @GetMapping("users")
+    private List<UserDetails> getAllUsers() {
+        return userDetailsRepository.findAll();
     }
 
    

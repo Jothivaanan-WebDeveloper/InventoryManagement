@@ -25,9 +25,6 @@ public class InventoryDetails {
     @Column(name = "id")
     public int id;
 
-    @Column(name = "employee_code")
-    public String employeeCode;
-
     @Column(name = "employee_name")
     public String employeeName;
 
@@ -48,6 +45,12 @@ public class InventoryDetails {
 
     @Column(name= "is_deleted")
     public Boolean isDeleted = Boolean.FALSE;
+    
+    @Column(name = "employee_code")
+    public String employeeCode;
+
+    // @OneToMany(mappedBy = "inventoryDetails")
+    // private List<UserDetails> userDetails;
 
     @Override
     public String toString() {
